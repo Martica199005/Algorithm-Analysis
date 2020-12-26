@@ -2,7 +2,7 @@
 
 Theme objectives
 The objectives of the theme are the implementation in Python of two algorithms for
-solving the SAT problem, determining the execution times for them and creating
+solving the SAT (Satisfiability )problem, determining the execution times for them and creating
 simple graphs to illustrate the complexity of the algorithms.
 
 algorithms
