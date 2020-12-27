@@ -14,7 +14,7 @@ variables. Each variable can be:
 (ii) appear without
 negation, 
 (iii) to appear negated. To find an interpretation, the algorithm will have a
-“exhaustive search” approach over all possible interpretations. You can
+“exhaustive search” (or brute force search ) approach over all possible interpretations. You can
 identify and add local optimizations to remove some interpretations (e.g. for
 situations where a variable does not appear in a clause).
 
