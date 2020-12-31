@@ -71,7 +71,7 @@ def fcn_find_interpretation(matrix_lit,number_variables):
   a=iter([list(p) for p in itertools.product(values, repeat=number_variables)])
   for a_item in a:
     count=0
-    for line in range(0,len(matrix_input)):
+    for line in range(0,len(matrix_lit)):
       count+=1
       result_clause = list(map(operator.mul,a_item,list(matrix_lit[line])))
       if 1 not in result_clause:
