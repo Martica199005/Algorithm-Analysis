@@ -1,0 +1,10 @@
+input00.txt number of variables 7 , length clause 32, time 0.0010466349999999972 s
+input01.txt number of variables 8 , length clause 64, time 0.002018671999999999 s
+input02.txt number of variables 9 , length clause 128, time 0.007746970000000006 s
+input03.txt number of variables 10 , length clause 256, time 0.018798418999999997 s
+input04.txt number of variables 11 , length clause 512, time 0.05014048 s
+input05.txt number of variables 12 , length clause 1024, time 0.39474565 s
+input06.txt number of variables 13 , length clause 2048, time 4.761479937000001 s
+input07.txt number of variables 14 , length clause 4096, time 14.902898997000001 s
+input08.txt number of variables 15 , length clause 8192, time 43.207952034 s
+input09.txt number of variables 16 , length clause 16384, time 122.24367475 s

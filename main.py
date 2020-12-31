@@ -8,7 +8,6 @@ import itertools
 from itertools import combinations
 
 
-list_result = []
 
 re_path="\d+"
 re_path1='\((.*?)\)'
@@ -35,12 +34,12 @@ def zeros_matrix(rows, cols):
     return M
 
 
-def find_expression2(formula):
+def find_expression(formula):
     '''returns the matrix with values -1,1,0 : -1 means ~ var, 1 var, 0 
     var not appears in clause'''
     clause= formula.split("^")
     length_clause= len(clause)
-    print(length_clause)
+    #print(length_clause)
     dict_literals={} # dictionary with literals
     literal_index = 0  # every literal has a index associated, unique
     matrix_l = zeros_matrix(length_clause, number_variables)
@@ -63,9 +62,8 @@ def find_expression2(formula):
             dict_literals[literal] = literal_index #key literal, value index
             literal_index+=1
           matrix_l[int(index_cl)][int(dict_literals.get(literal))] = 1
-    #print(dict_literals)
     inv_dict_literals= {v: k for k, v in dict_literals.items()}
-    return matrix_l,inv_dict_literals
+    return matrix_l,inv_dict_literals,length_clause
 
 def fcn_find_interpretation(matrix_lit,number_variables):
   '''I find the first combination that gives me all True but as soon as I find only one False I stop and go to the next combination'''
@@ -101,31 +99,27 @@ def write_out(filename,word):
 
 #sys.stdin
 
-filename="example.txt"
+filename="input09.txt"
 
 f = open(filename, "r")
 expression =f.read()
 m = re.findall(re_path, expression)
 list_variables=list(set(m))
-print(list_variables)
+#print(list_variables)
 number_variables=len(list_variables)
-print(number_variables)
+#print(number_variables)
 t1= time.process_time()
-matrix_input, dict_inv = find_expression2(expression)
-print(len(matrix_input))
-print(matrix_input)
-print(type(matrix_input))
-print('set')
-m_new=set([[1,2,3],[1,1,1],[1,2,3]])
-print(m_new)
-#result,interpretation=fcn_find_interpretation(matrix_input,number_variables)
+matrix_input, dict_inv, length_formula = find_expression(expression)
+#print(len(matrix_input))
+#print(matrix_input)
+result,interpretation=fcn_find_interpretation(matrix_input,number_variables)
 elapsed_time1 = time.process_time() - t1
 #time in seconds
-word1=filename+" "+"number of variables "+str(number_variables)+" "+str(elapsed_time1)+" s"
+word1=filename+" "+"number of variables "+str(number_variables)+" , length clause "+str(length_formula)+ ", time "+str(elapsed_time1)+" s"
 print(word1)
-#write_out('output.txt',word1)
-#print(result)
-#print(interpretation)
+write_out('output.txt',word1)
+print(result)
+print(interpretation)
 
 
 
