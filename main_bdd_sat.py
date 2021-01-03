@@ -110,9 +110,9 @@ literals ={ i : str(list_variables[i]) for i in range(0, len(list_variables) ) }
 #print(literals)
 t1= time.process_time()
 print(build_tree(expression, literals))
-elapsed_time1 = time.process_time() - t1
+elapsed_time = time.process_time() - t1
 #time in seconds
-word1=filename+" "+"number of variables "+str(number_variables)+", time "+str(elapsed_time1)+" s"
+word1=filename+" "+"number of variables "+str(number_variables)+", time "+str(elapsed_time)+" s"
 print(word1)
 write_out('output.txt',word1)
 
