@@ -62,8 +62,8 @@ def find_expression(formula):
             dict_literals[literal] = literal_index #key literal, value index
             literal_index+=1
           matrix_l[int(index_cl)][int(dict_literals.get(literal))] = 1
-    inv_dict_literals= {v: k for k, v in dict_literals.items()}
-    return matrix_l,inv_dict_literals,length_clause
+   
+    return matrix_l, length_clause
 
 def fcn_find_interpretation(matrix_lit,number_variables):
   '''I find the first combination that gives me all True but as soon as I find only one False I stop and go to the next combination'''
@@ -110,13 +110,13 @@ list_variables=list(set(m))
 number_variables=len(list_variables)
 #print(number_variables)
 t1= time.process_time()
-matrix_input, dict_inv, length_formula = find_expression(expression)
+matrix_input, length_formula = find_expression(expression)
 #print(len(matrix_input))
 #print(matrix_input)
 result,interpretation=fcn_find_interpretation(matrix_input,number_variables)
-elapsed_time1 = time.process_time() - t1
+elapsed_time = time.process_time() - t1
 #time in seconds
-word1=str(number_variables)+" "+str(elapsed_time1)+" s"
+word1=str(number_variables)+" "+str(elapsed_time)+" s"
 print(word1)
 write_out('output.txt',word1)
 print(result)
