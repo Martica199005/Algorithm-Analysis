@@ -95,7 +95,8 @@ def write_out(filename,word):
   myfile.close()
 
 
-
+#for line in sys.stdin:
+# expression=line
 filename="input09.txt"
 
 f = open(filename, "r")
