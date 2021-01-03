@@ -1,0 +1,10 @@
+input00.txt number of variables 7, time 0.003957614999999998 s
+input01.txt number of variables 8, time 0.007639518000000005 s
+input02.txt number of variables 9, time 0.019048743000000007 s
+input03.txt number of variables 10, time 0.03778802999999999 s
+input04.txt number of variables 11, time 0.105719221 s
+input05.txt number of variables 12, time 0.18581382999999999 s
+input06.txt number of variables 13, time 0.5777203479999999 s
+input07.txt number of variables 14, time 1.6109541219999999 s
+input08.txt number of variables 15, time 3.606154108 s
+input09.txt number of variables 16, time 7.1316471020000005 s
