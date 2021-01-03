@@ -97,7 +97,8 @@ def write_out(filename,word):
   myfile.close()
 
 
-#sys.stdin
+#for line in sys.stdin
+#   expression=line
 
 filename="input09.txt"
 
@@ -115,7 +116,7 @@ matrix_input, dict_inv, length_formula = find_expression(expression)
 result,interpretation=fcn_find_interpretation(matrix_input,number_variables)
 elapsed_time1 = time.process_time() - t1
 #time in seconds
-word1=filename+" "+"number of variables "+str(number_variables)+" , length clause "+str(length_formula)+ ", time "+str(elapsed_time1)+" s"
+word1=str(number_variables)+" "+str(elapsed_time1)+" s"
 print(word1)
 write_out('output.txt',word1)
 print(result)
@@ -126,7 +127,7 @@ print(interpretation)
 
 
 
-#plot execution time with number of variables and clauses
+
 
 
 
