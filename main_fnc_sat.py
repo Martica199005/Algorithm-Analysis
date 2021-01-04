@@ -65,7 +65,7 @@ def find_expression(formula):
    
     return matrix_l, length_clause
 
-def fcn_find_interpretation(matrix_lit,number_variables):
+def fnc_find_interpretation(matrix_lit,number_variables):
   '''I find the first combination that gives me all True but as soon as I find only one False I stop and go to the next combination'''
   values=[-1,1]
   a=iter([list(p) for p in itertools.product(values, repeat=number_variables)])
@@ -113,7 +113,7 @@ t1= time.process_time()
 matrix_input, length_formula = find_expression(expression)
 #print(len(matrix_input))
 #print(matrix_input)
-result,interpretation=fcn_find_interpretation(matrix_input,number_variables)
+result,interpretation=fnc_find_interpretation(matrix_input,number_variables)
 elapsed_time = time.process_time() - t1
 #time in seconds
 word1=str(number_variables)+" "+str(elapsed_time)+" s"
