@@ -108,11 +108,13 @@ list_variables=[int(i) for i in list_variables]
 list_variables.sort(reverse=True)
 literals ={ i : str(list_variables[i]) for i in range(0, len(list_variables) ) }
 #print(literals)
+clause= expression.split("^")
+length_clause= len(clause)
 t1= time.process_time()
 print(build_tree(expression, literals))
 elapsed_time = time.process_time() - t1
 #time in seconds
-word1=filename+" "+"number of variables "+str(number_variables)+", time "+str(elapsed_time)+" s"
+word1=str(number_variables*length_clause)+" "+str(elapsed_time)
 print(word1)
 write_out('output.txt',word1)
 
