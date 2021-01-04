@@ -116,7 +116,7 @@ matrix_input, length_formula = find_expression(expression)
 result,interpretation=fnc_find_interpretation(matrix_input,number_variables)
 elapsed_time = time.process_time() - t1
 #time in seconds
-word1=str(number_variables)+" "+str(elapsed_time)+" s"
+word1=str(number_variables*length_formula)+" "+str(elapsed_time)+" s"
 print(word1)
 write_out('output.txt',word1)
 print(result)
