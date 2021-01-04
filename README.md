@@ -18,10 +18,8 @@ The encoding of a formula is done as a string in which:
 ● The conjunction (AND) is encoded using the character '^' 
 
 
- Ox on the axis tests (calculated as the product of the number of variables and the number of clauses), and on Oy axis, the associated execution time (determined by the program). The chart will not be checked by the checker. 
- Besides this, it is also required to measure the execution time of the solvents and their plotting. 
- What we want to observe through these graphs is how time necessary to find an interpretation increases (exponentially) as the number of variables and clauses increases.
-
+We can observe through these graphs how time necessary to find an interpretation increases (exponentially) as the number of variables and clauses increases.
+The plots have on the x axis  the product of the number of variables and the number of clauses, and on the y axis, the associated execution time (determined by the program). 
 
 
 
